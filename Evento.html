@@ -34,7 +34,7 @@
   <form action="" method="post">
     <fieldset>
       <label>Evento: </label>
-      <select name="evento"> 
+      <select name="evento" required> 
         <option value=""> -- Selecione -- </option>
         <option value="voe_asas"> Voe sem asas </option>
         <option value="festa_junina"> Festa Junina </option>
@@ -45,33 +45,36 @@
     <fieldset>
       <legend>Informações de Acesso</legend>
       <label for="user">Usuário:</label>
-      <input type="text" id="user" /> </input><br><br>
+      <input type="text" id="user" required="true" /><br><br>
       <label for="password">Senha:</label>
-      <input type="password" id="password" /> </input><br><br>
+      <input type="password" id="password" required /><br><br>
       <label for="auth_pass">Confirme a Senha:</label>
-      <input type="password" id="auth_pass" /> </input>
+      <input type="password" id="auth_pass" required />
     </fieldset>
   
     <fieldset>
       <legend>Informações Pessoas</legend>
       <label for="nome">Nome Completo:</label>
-      <input type="text" id="nome" /> </input><br><br>
+      <input type="text" id="nome" required /><br><br>
       <label for="email">Email:</label>
-      <input type="email" id="email" /> </input><br><br>
-      <label for="celular">Celular:</label> <p>(99) 99999-9999</p>
-      <input type="number" id="celular" /> </input><br><br>
+      <input type="email" id="email" required /> <br><br>
+      <label for="celular">Celular:</label> 
+      <input type="number" id="celular" required /> <p>Ex: (99) 99999-9999</p><br>
       <fieldset>
         <legend>Sexo</legend>
         <input type="radio" value="Masculino"> Masculino </input>
         <input type="radio" value="Feminino"> Feminino </input><br><br>
-      </fieldset>
+      </fieldset><br>
       <label for="nasc">Data de Nascimento:</label>
-      <input type="date" id="email" /> </input><br><br>
-      <label for="celular">Celular:</label> <p>(99) 99999-9999</p>
-      <input type="number" id="celular" /> </input><br><br>
-      
-    </fieldset>
+      <input type="date" id="nasc" required /> <br><br>
+      <label for="cor">Cor: </label>  
+      <input type="color" id="cor" required /> <br><br>
 
+      <label for="github">Perfil do Github: </label>  
+      <input type="url" id="github" required /><br>
+    </fieldset>
+    <input type="submit" value="Enviar"></input> <input type="reset" value="Limpar"></input>
+  </form>
   <script src="script.js"></script>
 
 </body>
