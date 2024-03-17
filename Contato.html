@@ -23,52 +23,54 @@
     </nav>
 
     <br>
+    <a href="https://ptb.ifsp.edu.br/"><img src="images/Logo.jpg" /> </a>
     <br>
-    <strong>Mande uma mensagem</strong>
+    
+    <h1>Mande uma mensagem</h1>
 
     <form action="" method="post">
-      <fieldset>
-        <label>Evento: </label>
-        <select name="evento" required> 
-          <option value=""> -- Selecione -- </option>
-          <option value="voe_asas"> Voe sem asas </option>
-          <option value="festa_junina"> Festa Junina </option>
-          <option value="semana_tec"> Semana de tecnologia </option>
-        </select>
-      </fieldset>
 
-      <fieldset>
-        <legend>Informações de Acesso</legend>
-        <label for="user">Usuário:</label>
-        <input type="text" id="user" required="true" /><br><br>
-        <label for="password">Senha:</label>
-        <input type="password" id="password" required /><br><br>
-        <label for="auth_pass">Confirme a Senha:</label>
-        <input type="password" id="auth_pass" required />
-      </fieldset>
+      <ul>
+        <li>
+          <label for="user">Nome:</label>
+          <input type="text" id="user" required="true" /><br>
+        </li>
+        <li>
+          <label for="email">Email:</label>
+          <input type="email" id="email" required /><br>
+        </li>
+        <li>
+          <label for="celular">Celular:</label> 
+          <input type="number" id="celular" required /> <p>Ex: (99) 99999-9999</p><br>
+        </li>
 
-      <fieldset>
-        <legend>Informações Pessoas</legend>
-        <label for="nome">Nome Completo:</label>
-        <input type="text" id="nome" required /><br><br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" required /> <br><br>
-        <label for="celular">Celular:</label> 
-        <input type="number" id="celular" required /> <p>Ex: (99) 99999-9999</p><br>
-        <fieldset>
-          <legend>Sexo</legend>
-          <input type="radio" value="Masculino"> Masculino </input>
-          <input type="radio" value="Feminino"> Feminino </input><br><br>
-        </fieldset><br>
-        <label for="nasc">Data de Nascimento:</label>
-        <input type="date" id="nasc" required /> <br><br>
-        <label for="cor">Cor: </label>  
-        <input type="color" id="cor" required /> <br><br>
+        <li>
+          <label>Assunto:</label> 
 
-        <label for="github">Perfil do Github: </label>  
-        <input type="url" id="github" required /><br>
-      </fieldset>
-      <input type="submit" value="Enviar"></input> <input type="reset" value="Limpar"></input>
+          <select name="assunto" required> 
+            <option value=""> -- Assunto -- </option>
+            <option value="contrato"> Contrato </option>
+            <option value="outro"> Outro </option>
+          </select><br>
+        </li><br>
+
+        <li>
+          <label for="texto">Mensagem:</label>
+          <textarea required id="texto">Insira sua mensagem aqui</textarea>
+        </li>
+
+        <li>
+          <fieldset>
+            <legend>Opções de Resposta</legend>
+            <input type="checkbox"> Email </input>
+            <input type="checkbox"> Telefone </input>
+          </fieldset>
+        </li>
+
+        <li>
+           <input type="submit" value="Enviar"></input>
+        </li>
+      </ul>
     </form>
     
     <script src="script.js"></script>
